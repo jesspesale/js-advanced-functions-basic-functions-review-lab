@@ -10,7 +10,30 @@ const  mondayWork = function(activity = "go to the office") {
 
 const wrapAdjective = function(symbol = "*") {
     return function(adjective = "special") {
-        return `You are ${symbol}${adjective}${symbol}`
+        return `You are ${symbol}${adjective}${symbol}!`
+}
+}
 
+const Calculator = {
+    add: function add(a, b) {
+        return a + b
+    },
+    subtract: function subtract(a, b) {
+        return a - b
+    },
+    multiply: function multiply(a,b) {
+        return a * b
+    },
+    divide: function divide(a, b) {
+        return a / b
+    }
 }
+
+function actionApplyer (integer, array) {
+
+    for (var i = 0; i < array.length; i++) {
+        integer = array[i](integer)
+    }
+    return integer
 }
+
